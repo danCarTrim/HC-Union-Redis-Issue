@@ -10,7 +10,7 @@ var redisConnectionString = await ConnectionMultiplexer.ConnectAsync("<your con 
 // Uncomment AddRedisSubscriptions and commend InMemory to test the issue.
 builder
     .AddGraphQL()
-    //.AddRedisSubscriptions((sp) => con)
+    //.AddRedisSubscriptions((sp) => redisConnectionString)
     .AddInMemorySubscriptions()
     .AddUnionType<IAuthor>()
     .AddType<FictionAuthor>()
