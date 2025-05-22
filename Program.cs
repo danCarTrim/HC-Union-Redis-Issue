@@ -3,7 +3,7 @@ using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var con = await ConnectionMultiplexer.ConnectAsync("<your con string>");
+var redisConnectionString = await ConnectionMultiplexer.ConnectAsync("<your con string>");
 
 // Add the IAuthor union type + related types.
 // IAuthor, sciFiAuthor, nonFictionAuthor, fictionAuthor are in Author.cs
